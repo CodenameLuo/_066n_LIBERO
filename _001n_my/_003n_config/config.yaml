@@ -1,0 +1,5 @@
+benchmark_root: /root/autodl-tmp/_000n_00000000/_000n_uni/_001n_my_codes/_001n_projects/_005n_claude_code_projs/_001n_cc_translation/_010n_codes/_032n_LIBERO/LIBERO/libero/libero
+bddl_files: /root/autodl-tmp/_000n_00000000/_000n_uni/_001n_my_codes/_001n_projects/_005n_claude_code_projs/_001n_cc_translation/_010n_codes/_032n_LIBERO/LIBERO/libero/libero/bddl_files
+init_states: /root/autodl-tmp/_000n_00000000/_000n_uni/_001n_my_codes/_001n_projects/_005n_claude_code_projs/_001n_cc_translation/_010n_codes/_032n_LIBERO/LIBERO/libero/libero/init_files
+datasets: /root/autodl-tmp/_000n_00000000/_000n_uni/_001n_my_codes/_001n_projects/_005n_claude_code_projs/_001n_cc_translation/_010n_codes/_032n_LIBERO/LIBERO/_001n_my/_004n_datasets
+assets: /root/autodl-tmp/_000n_00000000/_000n_uni/_001n_my_codes/_001n_projects/_005n_claude_code_projs/_001n_cc_translation/_010n_codes/_032n_LIBERO/LIBERO/libero/libero/assets
