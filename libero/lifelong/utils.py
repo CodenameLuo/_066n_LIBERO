@@ -98,6 +98,8 @@ def compute_flops(algo, dataset, cfg):
     model = copy.deepcopy(algo.policy)
     tmp_loader = DataLoader(dataset, batch_size=1, num_workers=0, shuffle=True)
     data = next(iter(tmp_loader))
+    if hasattr(dataset, "sequence_dataset"):
+        dataset.sequence_dataset.close_and_delete_hdf5_handle()
     data = TensorUtils.map_tensor(data, lambda x: safe_device(x, device=cfg.device))
     macs, params = profile(model, inputs=(data,), verbose=False)
     GFLOPs = macs * 2 / 1e9

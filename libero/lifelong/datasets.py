@@ -56,6 +56,7 @@ def get_dataset(
         hdf5_normalize_obs=None,
         filter_by_attribute=filter_key,  # can optionally provide a filter key here
     )
+    dataset.obs_modality = obs_modality
     return dataset, shape_meta
 
 
@@ -70,6 +71,8 @@ class SequenceVLDataset(Dataset):
         return len(self.sequence_dataset)
 
     def __getitem__(self, idx):
+        if ObsUtils.OBS_KEYS_TO_MODALITIES is None and hasattr(self.sequence_dataset, "obs_modality"):
+            ObsUtils.initialize_obs_utils_with_obs_specs({"obs": self.sequence_dataset.obs_modality})
         return_dict = self.sequence_dataset.__getitem__(idx)
         return_dict["task_emb"] = self.task_emb
         return return_dict
